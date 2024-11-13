@@ -6,7 +6,7 @@ const port = process.env.PORT || 5000;
 
 const course = require("./data/course.json");
 
-//app.use(cors());
+app.use(cors());
 
 // app.use(
 //   cors({
@@ -16,14 +16,14 @@ const course = require("./data/course.json");
 //   })
 // );
 
-app.use(
-  cors({
-    origin: [
-      "http://localhost:5173", 
-      "https://course-project-react-routing-firebase.vercel.app/",
-    ],
-  })
-);
+// app.use(
+//   cors({
+//     origin: [
+//       "http://localhost:5173", 
+//       "https://course-project-react-routing-firebase.vercel.app/",
+//     ],
+//   })
+// );
 
 app.get("/", (req, res) => {
   res.send("Course Server Running");
